@@ -2,8 +2,8 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 from apscheduler.schedulers.background import BackgroundScheduler
 import datetime
-
-TOKEN = "8053082474:AAFbdOLKMC0KSdVsqR6z4LRED224JWAsJpk"
+import os
+TOKEN = os.environ.get("TELEGRAM_TOKEN")
 
 # Список задач по дням
 tasks = [
